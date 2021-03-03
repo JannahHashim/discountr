@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEB3B"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="105dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="39dp"
+        app:layout_constraintBottom_toTopOf="@+id/etprice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <EditText
+        android:id="@+id/etprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Insert Price"
+        app:layout_constraintBottom_toTopOf="@+id/tvcho"
+        app:layout_constraintStart_toStartOf="@+id/tvcho" />
+
+    <TextView
+        android:id="@+id/tvcho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginLeft="77dp"
+        android:layout_marginTop="269dp"
+        android:text="CHOOSE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="PERCENT"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/btn10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:text="10%"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn20"
+        app:layout_constraintEnd_toStartOf="@+id/btn20" />
+
+    <Button
+        android:id="@+id/btn20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:text="20%"
+        app:layout_constraintEnd_toStartOf="@+id/btn30"
+        app:layout_constraintTop_toBottomOf="@+id/tvper" />
+
+    <Button
+        android:id="@+id/btn30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
+        android:text="30%"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn20"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvdis"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginBottom="29dp"
+        android:text="Result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup2"
+        app:layout_constraintStart_toEndOf="@+id/tvper" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="@+id/tvcho"
+        app:layout_constraintTop_toBottomOf="@+id/tvcho">
+
+        <RadioButton
+            android:id="@+id/rbdis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Discount" />
+
+        <RadioButton
+            android:id="@+id/rbint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Interest" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginRight="67dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etprice">
+
+        <RadioButton
+            android:id="@+id/rbump"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UMP" />
+
+        <RadioButton
+            android:id="@+id/rbnump"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Non UMP" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>
